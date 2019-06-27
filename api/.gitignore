@@ -60,9 +60,5 @@ typings/
 # next.js build output
 .next
 
-# SQLite database file
-*.db
 
-# SQLite db folder
-/db
 
