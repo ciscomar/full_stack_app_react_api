@@ -7,13 +7,13 @@ const bcryptjs = require("bcryptjs");
 //Autheticate User 
 module.exports = (req, res, next) => {
   const info= authenticate(req);
-
-
   let message = null;
+
   if (info) {
     //Find user with email
     User.findOne({ where: { emailAddress: info.name } })
       .then(user => {
+      
         if (user) {
           const authenticated = bcryptjs.compareSync(
             info.pass,

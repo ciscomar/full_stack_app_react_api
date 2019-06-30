@@ -45,12 +45,10 @@ class CreateCourse extends Component {
             .catch(err => {
              
                 if (err.response.status === 400) {
-                    const errors = err.response.data.Error;
-                    const messages = Object.values(errors).map(err => {
-                        return err.message;
-                    });
+                    let errors = [err.response.data.message];
+ 
                     this.setState({
-                        errors: messages
+                        errors: errors
                     });
                 } else {
                     console.log('Error', err);
@@ -84,7 +82,7 @@ class CreateCourse extends Component {
                                         </div>
                                         <div className="course--description">
                                             <div>
-                                                <textarea id="description" required  name="description" placeholder="Description..." onChange={this.change}/>
+                                                <textarea id="description"  name="description" placeholder="Description..." onChange={this.change}/>
                                             </div>
                                         </div>
                                     </div>

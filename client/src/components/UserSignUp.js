@@ -21,20 +21,20 @@ class UserSignUp extends Component {
                                     <div>
                                         <form onSubmit={signUp}>
                                             <div>
-                                                <input id="firstName" required name="firstName" type="text" className="" placeholder="First Name" onChange={change} />
+                                                <input id="firstName"  name="firstName" type="text" className="" placeholder="First Name" onChange={change} />
                                             </div>
                                             <div>
-                                                <input id="lastName" required name="lastName" type="text" className="" placeholder="Last Name" onChange={change} />
+                                                <input id="lastName"  name="lastName" type="text" className="" placeholder="Last Name" onChange={change} />
                                             </div>
                                             <div>
-                                                <input id="emailAddress" required name="emailAddress" type="text" className="" autoComplete="username" placeholder="Email Address" onChange={change}
+                                                <input id="emailAddress"  name="emailAddress" type="text" className="" autoComplete="username" placeholder="Email Address" onChange={change}
                                                 />
                                             </div>
                                             <div>
-                                                <input id="password" required name="password" type="password" value={undefined} className="" autoComplete="new-password" placeholder="Password" onChange={change} />
+                                                <input id="password"  name="password" type="password" value={undefined} className="" autoComplete="new-password" placeholder="Password" onChange={change} />
                                             </div>
                                             <div>
-                                                <input id="confirmPassword" required name="confirmPassword" type="password" className="" autoComplete="new-password" placeholder="Confirm Password" onChange={change}/>
+                                                <input id="confirmPassword"  name="confirmPassword" type="password" className="" autoComplete="new-password" placeholder="Confirm Password" onChange={change}/>
                                             </div>
 
                                             <div className="grid-100 pad-bottom">

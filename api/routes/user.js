@@ -47,10 +47,12 @@ router.post("/", (req, res) => {
               });
           })
           .catch(e => {
-            res.status(500).json({ Error: e });
+  
+            res.status(500).json({ Error: 'Please use a valid email address' });
+
           });
       } else {
-        res.status(400).json({ Message: "User is already registered" });
+        res.status(403).json({ Error: "User is already registered" });
       }
     })
     .catch(e => {

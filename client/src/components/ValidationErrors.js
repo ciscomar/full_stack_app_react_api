@@ -14,7 +14,7 @@ class ValidationErrors extends Component {
                     <div className="validation-errors">
                         <ul>
                             {errors.map((msg, i) => {
-                                return <li key={i}>- {msg}</li>;
+                                return <li key={i}>{msg}</li>;
                             })}
                         </ul>
                     </div>

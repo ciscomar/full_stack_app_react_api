@@ -38,7 +38,7 @@ class AuthProvider extends Component {
             errors: null,
         })
     };
-//Used to Sign in
+    //Used to Sign in
     signIn = e => {
         if (e) e.preventDefault();
         this.errorReset()
@@ -70,10 +70,11 @@ class AuthProvider extends Component {
             })
         });
     };
-//Used to Sign Up
+    //Used to Sign Up
     signUp = e => {
         this.errorReset()
         e.preventDefault();
+
         const {
             firstName,
             lastName,
@@ -99,20 +100,15 @@ class AuthProvider extends Component {
                     this.signIn();
                 })
                 .catch(err => {
-                    if (err.response.status === 400) {
-                        const errors = err.response.data;
-                        const messages = Object.values(errors).map(err => {
-                            return err.message;
-                        });
-                        this.setState({
-                            errors: messages
-                        });
-                    } else {
-                        console.log('Error', err);
-                    }
+
+                    let error = [err.response.data.Error];
+                    this.setState({
+                        errors: error
+                    });
+
                 });
     };
-//Used to Sign Out
+    //Used to Sign Out
     signOut = () => {
         this.errorReset()
         this.setState({
@@ -123,7 +119,7 @@ class AuthProvider extends Component {
         });
         localStorage.clear()
     };
-//Check if user is author
+    //Check if user is author
     isAuthor = courseId => e => {
         if (this.state._id === courseId) {
             this.setState({
@@ -135,7 +131,7 @@ class AuthProvider extends Component {
             })
         }
     };
-// Updates values as user types in inputs.
+    // Updates values as user types in inputs.
     change = e => {
         this.errorReset()
         if (e.currentTarget.value === '') {

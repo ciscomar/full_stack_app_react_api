@@ -65,8 +65,10 @@ class UpdateCourse extends Component {
             })
             .catch(err => {
                 if (err.response.status === 400) {
+                    let error = [err.response.data.message];
                     this.setState({
-                        errors: err.response.data.message
+                        
+                        errors: error
                     });
                 } else {
                     console.log('Error', err);
@@ -97,12 +99,12 @@ class UpdateCourse extends Component {
                                 <div className="course--header">
                                     <h4 className="course--label"><FontAwesomeIcon icon="book" /> Course</h4>
                                     <div>
-                                        <input required className="input-title course--title--input" id="title" name="title" type="text" placeholder="Title..." onChange={this.change} value={title} />
+                                        <input className="input-title course--title--input" id="title" name="title" type="text" placeholder="Title..." onChange={this.change} value={title} />
                                     </div>
                                 </div>
                                 <div className="course--description">
                                     <div>
-                                        <textarea required id="description" name="description" placeholder="Description..." onChange={this.change} value={description} />
+                                        <textarea id="description" name="description" placeholder="Description..." onChange={this.change} value={description} />
                                     </div>
                                 </div>
                             </div>

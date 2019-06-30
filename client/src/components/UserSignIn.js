@@ -22,10 +22,10 @@ class UserSignIn extends Component {
                                         <div>
                                             <form onSubmit={signIn}>
                                                 <div>
-                                                    <input required id="emailAddress" name="emailAddress" type="text" autoComplete="username" placeholder="Email Address" onChange={change}/>
+                                                    <input  id="emailAddress" name="emailAddress" type="text" autoComplete="username" placeholder="Email Address" onChange={change}/>
                                                 </div>
                                                 <div>
-                                                    <input required id="password" name="password" type="password" autoComplete="current-password" placeholder="Password" onChange={change}/>
+                                                    <input  id="password" name="password" type="password" autoComplete="current-password" placeholder="Password" onChange={change}/>
                                                 </div>
                                                 <div className="grid-100 pad-bottom">
                                                     <button className="button" type="submit">Sign In</button>
