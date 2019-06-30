@@ -27,7 +27,7 @@ class UserSignUp extends Component {
                                                 <input id="lastName" required name="lastName" type="text" className="" placeholder="Last Name" onChange={change} />
                                             </div>
                                             <div>
-                                                <input id="emailAddress" required name="emailAddress" type="email" className="" autoComplete="username" placeholder="Email Address" onChange={change}
+                                                <input id="emailAddress" required name="emailAddress" type="text" className="" autoComplete="username" placeholder="Email Address" onChange={change}
                                                 />
                                             </div>
                                             <div>

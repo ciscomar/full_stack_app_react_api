@@ -126,7 +126,7 @@ class UpdateCourse extends Component {
                             </div>
                             <div className="grid-100 pad-bottom">
                                 <button className="button" type="submit"> Update Course </button>
-                                <NavLink to={'/'} className="button button-secondary">Cancel</NavLink>
+                                <NavLink to={`/courses/${this.props.match.params.id}`} className="button button-secondary">{' '}Cancel</NavLink>
                             </div>
                         </form>
                     </div>
